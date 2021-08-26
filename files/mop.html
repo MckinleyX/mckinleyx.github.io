@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<link rel="http://gmpg.org/xfn/11">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+		tex2jax: {
+		  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		  processEscapes: true
+		}
+	  });
+	</script>
+
+	<script type="text/javascript"
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+
+	<title>methods of proof &#8211; how did i get here</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link rel='dns-prefetch' href='//i1.wp.com' />
+<link rel='dns-prefetch' href='//i2.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="how did i get here &raquo; Feed" href="https://how-did-i-get-here.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="how did i get here &raquo; Comments Feed" href="https://how-did-i-get-here.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="how did i get here &raquo; methods of proof Comments Feed" href="https://how-did-i-get-here.com/59/feed/" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v7.18.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=UA-142127774-1"  type="text/javascript" data-cfasync="false" async></script>
+			<script type="text/javascript" data-cfasync="false">
+				var mi_version = '7.18.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStr = 'ga-disable-UA-142127774-1';
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					window[disableStr] = true;
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+					window[disableStr] = true;
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+				if ( mi_track_user ) {
+					function __gtagTracker() {dataLayer.push( arguments );}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+						                    });
+					__gtagTracker( 'config', 'UA-142127774-1', {
+						forceSSL:true,link_attribution:true,					} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+										if ( args.hasOwnProperty(arg) && gaMap.hasOwnProperty(arg) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/how-did-i-get-here.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://how-did-i-get-here.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+#start-resizable-editor-section{display:none}.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code{font-family:Menlo,Consolas,monaco,monospace;color:#1e1e1e;padding:.8em 1em;border:1px solid #ddd;border-radius:4px}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-group.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto;opacity:.4}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}#end-resizable-editor-section{display:none}
+</style>
+<link rel='stylesheet' id='mediaelement-css'  href='https://how-did-i-get-here.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://how-did-i-get-here.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-night-mode-css'  href='https://how-did-i-get-here.com/wp-content/plugins/wp-night-mode/public/css/wp-night-mode-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;display=fallback&#038;ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='manor-main-css'  href='https://how-did-i-get-here.com/wp-content/themes/blogscript/style.css?ver=0.1.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://how-did-i-get-here.com/wp-content/plugins/jetpack/css/jetpack.css?ver=10.0' type='text/css' media='all' />
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/how-did-i-get-here.com","hash_tracking":"false","ua":"UA-142127774-1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://how-did-i-get-here.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=7.18.0' id='monsterinsights-frontend-script-js'></script>
+<script type='text/javascript' src='https://how-did-i-get-here.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://how-did-i-get-here.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='wp-night-mode-js-extra'>
+/* <![CDATA[ */
+var wpnmObject = {"button_html":"<div class=\"wpnm-button style-1\">\n                            <div class=\"wpnm-slider round\"><\/div>\n                        <\/div>","default":"","server_time":"1629987389","turn_on_time":"","turn_off_time":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://how-did-i-get-here.com/wp-content/plugins/wp-night-mode/public/js/wp-night-mode-public.js?ver=1.0.0' id='wp-night-mode-js'></script>
+<link rel="https://api.w.org/" href="https://how-did-i-get-here.com/wp-json/" /><link rel="alternate" type="application/json" href="https://how-did-i-get-here.com/wp-json/wp/v2/posts/875" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://how-did-i-get-here.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://how-did-i-get-here.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8" />
+<link rel="canonical" href="https://how-did-i-get-here.com/59/" />
+<link rel='shortlink' href='https://how-did-i-get-here.com/?p=875' />
+<link rel="alternate" type="application/json+oembed" href="https://how-did-i-get-here.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhow-did-i-get-here.com%2F59%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://how-did-i-get-here.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhow-did-i-get-here.com%2F59%2F&#038;format=xml" />
+			<style type="text/css">
+				 
+			.wp-night-mode-slider {
+				background-color: ;
+			}
+
+			.wp-night-mode-button.active .wp-night-mode-slider {
+				background-color: ;
+			}
+
+			body.wp-night-mode-on * {
+				background: #202124;
+			}
+
+			body.wp-night-mode-on .customize-partial-edit-shortcut button,
+			body.wp-night-mode-on .customize-partial-edit-shortcut button svg,
+			body.wp-night-mode-on #adminbarsearch,
+			body.wp-night-mode-on span.display-name,
+			body.wp-night-mode-on span.ab-icon,
+			body.wp-night-mode-on span.ab-label {
+			    background: transparent;
+			}
+
+			body.wp-night-mode-on * {
+				color: #ffffff;
+			}
+
+			body.wp-night-mode-on a {
+				color: #0064c7;
+			}
+
+			body.wp-night-mode-on a:hover,
+			body.wp-night-mode-on a:visited,
+			body.wp-night-mode-on a:active {
+				color: ;
+			}
+		}				@media (prefers-color-scheme: dark) {
+					 
+			.wp-night-mode-slider {
+				background-color: ;
+			}
+
+			.wp-night-mode-button.active .wp-night-mode-slider {
+				background-color: ;
+			}
+
+			body.wp-night-mode-on * {
+				background: #202124;
+			}
+
+			body.wp-night-mode-on .customize-partial-edit-shortcut button,
+			body.wp-night-mode-on .customize-partial-edit-shortcut button svg,
+			body.wp-night-mode-on #adminbarsearch,
+			body.wp-night-mode-on span.display-name,
+			body.wp-night-mode-on span.ab-icon,
+			body.wp-night-mode-on span.ab-label {
+			    background: transparent;
+			}
+
+			body.wp-night-mode-on * {
+				color: #ffffff;
+			}
+
+			body.wp-night-mode-on a {
+				color: #0064c7;
+			}
+
+			body.wp-night-mode-on a:hover,
+			body.wp-night-mode-on a:visited,
+			body.wp-night-mode-on a:active {
+				color: ;
+			}
+		}				}
+			</style>
+		<style type='text/css'>img#wpstats{display:none}</style>
+		<style id="manor-color-scheme-css" type="text/css">blockquote,
+a,
+.site-nav .current-menu-item > a,
+.site-nav .current_page_item > a,
+.social-nav a:hover,
+.widget a:hover,
+.site-footer a:hover,
+.comments-pagination a:hover,
+.pagination a:hover,
+.comments-pagination .page-numbers.current,
+.pagination .page-numbers.current,
+.entries .entry-title a:hover,
+.entry-meta a:hover,
+.has-primary-color,
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+	color: #2655EF;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.entry-meta:after,
+.has-primary-background-color,
+.wp-block-button .wp-block-button__link:not(.has-background),
+.wp-block-file .wp-block-file__button {
+	background-color: #2655EF;
+}
+
+.comments-pagination .page-numbers.current,
+.pagination .page-numbers.current,
+.wp-block-button.is-style-outline .wp-block-button__link {
+	border-color: #2655EF;
+}
+
+a:hover {
+	color: #234fdd;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+.wp-block-button .wp-block-button__link:not(.has-background):hover,
+.wp-block-file .wp-block-file__button:hover {
+	background-color: #234fdd;
+}</style></head>
+<body class="post-template-default single single-post postid-875 single-format-standard wp-embed-responsive">
+
+	<header id="mastheader" class="site-header">
+		<div class="container">
+			
+			<h1 class="site-title"><a href="https://how-did-i-get-here.com/">how did i get here</a></h1>
+					</div>
+	</header>
+	<!-- /#mastheader.site-header -->
+
+	
+	<nav id="site-nav" class="site-nav">
+		<div class="container">
+			<button id="site-nav-toggle" class="site-nav-toggle" aria-controls="site-nav-menu" aria-expanded="false">
+				<span class="site-nav-toggle-lines">
+					<span class="site-nav-toggle-line top"></span>
+					<span class="site-nav-toggle-line bottom"></span>
+				</span>
+				<span class="site-nav-toggle-text">Menu</span>
+			</button>
+
+			<div id="site-nav-menu" class="site-nav-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-2139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2139"><a href="https://how-did-i-get-here.com/">home</a></li>
+<li id="menu-item-2140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2140"><a href="https://how-did-i-get-here.com/about-me/">about me</a></li>
+</ul></div>		</div>
+	</nav>
+	<!-- /#site-nav.site-nav -->
+
+	<div id="site-content" class="site-content">
+
+<main id="primary" class="site-main" role="main">
+	
+<article id="post-875" class="post-875 post type-post status-publish format-standard hentry category-misc">
+	<div class="entry-content">
+						<div class="navbar top">
+						<div class="navbutton prevpost">
+				 <a href="/58/" class="navbuttontext">
+					&lt; prev
+				</a>
+			</div>
+						<span class="bluebar">|</span>
+						<div class="navbutton nextpost">
+				<a href="/60/" class="navbuttontext">
+					next &gt;
+				</a>
+			</div>
+					</div>
+			</div>
+	
+	<header class="entry-header">
+		<h1 class="entry-title">methods of proof</h1>	</header>
+
+	<div class="entry-content">
+		<div class="clearfix">
+<p>If you&#8217;re completely new to maths, and you don&#8217;t get how proofs work (and you wanna learn how they work), then this is the post for you.</p>
+
+
+
+<p>What is a proof in mathematics? Think of a proof as nothing more than an argument that convinces people that you&#8217;re right. But not just any argument &#8212; one that cannot be questioned.</p>
+
+
+
+<p>For instance, consider the following question:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Prove that $n^2+2$ is never a perfect square when $n$ is a non-negative integer.</p></blockquote>
+
+
+
+<p>It might look a bit daunting. You could say something like &#8220;I tried for a bit but I couldn&#8217;t find any which were squares&#8221;. Definitely not a proof, as it&#8217;s hard for that to convince anybody that you&#8217;re correct.</p>
+
+
+
+<p>&#8220;Well $n^2$ is a square and that&#8217;s two away so it&#8217;s probably not a square either because square numbers are really far apart&#8221; comes closer, but obviously &#8220;square numbers are really far apart&#8221; is not accurate. For instance, 0 and 1 are only one number apart.</p>
+
+
+
+<p>A mathematical proof would build on that idea as follows:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>If $n=0$, then $n^2+2=2$ which is not a perfect square.<br>If $n\neq0$, then $$n^2&lt;n^2+2&lt;n^2+2n+1=(n+1)^2$$ Now if you think about what this is telling you, it&#8217;s saying that $n^2+2$ lies between two consecutive perfect squares. But that means $n^2+2$ can&#8217;t itself be a perfect square, because perfect squares never lie between two other consecutive perfect squares (by definition of perfect square).</p></blockquote>
+
+
+
+<p>Don&#8217;t worry if you didn&#8217;t get that proof. Read through the post below and come back and see if it makes sense then!</p>
+
+
+
+<p>How exactly do you prove stuff? Here are some methods:</p>
+
+
+
+<h5>Direct proof</h5>
+
+
+
+<p>This means you directly prove something. You start at the start, and via a chain of deductions, you arrive at the finish. For instance, the above proof is a direct proof. Another example is as follows:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Question: prove that for all reals $a$ and $b$, $$a^2+b^2\ge2ab$$</p><p>Proof: Note that $x^2\ge0$ for all $x\in\mathbb{R}$. The proof of this is trivial and left as an exercise for the reader (but if you really can&#8217;t get it, consider what happens if $x$ is positive, negative, and $0$).</p><p>Then letting $x=a-b$, we know that $a^2-2ab+b^2\ge0$ and rearranging this proves the question.</p></blockquote>
+
+
+
+<p>Direct proof also has a subtopic known as &#8220;divide and conquer&#8221; or &#8220;case bash&#8221;: what you do is you divide the problem up into a bunch of subproblems, and prove that each subproblem is true. I&#8217;ve already used this twice in this post, but another example can&#8217;t hurt:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Question: prove that for any positive integer $n$, one of $n,n+1$ and $n+2$ is divisible by $3$.</p><p>Proof: If you remember division from primary school, you&#8217;ll know that any number divided by $3$ leaves a remainder which is either $0$ (no remainder), $1$ or $2$. If the remainder is $3$ or more then we divided incorrectly. We consider what happens when we divide $n$ by $3$:</p><p>If $n$ leaves a remainder of $0$, then $n$ is, by definition, a multiple of $3$ ($n=3k$ is a multiple of $3$)</p><p>If $n$ leaves a remainder of $1$, then $n+2$ leaves a remainder of $0$ and is thus a multiple of $3$ ($n=3k+1$ so $n+2=3(k+1)$ is a multiple of $3$)</p><p>If $n$ leaves a remainder of $2$, then $n+1$ is divisible by $3$ (see if you can write out your own bracket for this case!)</p></blockquote>
+
+
+
+<h5>Proof by contradiction</h5>
+
+
+
+<blockquote class="wp-block-quote"><p>&#8220;How do you know you haven&#8217;t died?&#8221;<br>&#8220;If I&#8217;d died, I&#8217;d be in hell&#8221;</p><cite>&#8211;<em>something i definitely did not just make up on the spot</em> by h. digh</cite></blockquote>
+
+
+
+<p>Proof by contradiction works by assuming the opposite of the question is true and proving that it ends up being absurd. Let&#8217;s look at an example.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Question: prove that if $n^2$ is even then so is $n$.</p><p>Proof: Given that $n^2$ is even, suppose $n$ is odd. As we all know, an odd number times an odd number is odd so $n\times n=n^2$ is odd. But that&#8217;s a contradiction! We supposed that $n^2$ was even at the start. Thus somewhere along the line, we made an incorrect deduction, and the only place that could&#8217;ve happened was when we said $n$ is odd. Hence $n$ must be even.</p></blockquote>
+
+
+
+<p>Let&#8217;s do some formal logic before moving onto the next one.</p>
+
+
+
+<p>$A\implies B$ tells us that if $A$ is true, then $B$ is true, and is read &#8220;A implies B&#8221;.</p>
+
+
+
+<p>Let&#8217;s look at an example. If A is the statement &#8220;The year is 2019&#8221; and B is the statement &#8220;It&#8217;s the 21st century&#8221; then $A\implies B$ is a true deduction: if A (the year is 2019) is true, then B (it&#8217;s the 21st century) is true as well. On the other hand, B implies A is false: just because it&#8217;s the 21st century doesn&#8217;t mean the year is 2019. It could be 2018 or any of another 99 years.</p>
+
+
+
+<p>One more example? Sure &#8212; A is the statement &#8220;In a triangle, $a^2+b^2=c^2$ where $c$ is the longest side&#8221; and B is the statement &#8220;The triangle is right-angled&#8221;. We know by pythagoras that $B\implies A$ &#8212; that is, if a triangle is right angled then $a^2+b^2=c^2$. But does $A\implies B$ hold? In fact it does also &#8212; if $a^2+b^2=c^2$, then the triangle is right-angled.</p>
+
+
+
+<h5>Proof by contrapositive</h5>
+
+
+
+<p>This is really just proof by contradiction, but renamed and revamped.</p>
+
+
+
+<p>If we let $\neg$ mean &#8220;not&#8221; (for instance, if A is the statement &#8220;a is positive&#8221; then $\neg A$ means &#8220;a is not positive&#8221;), then</p>
+
+
+
+<blockquote class="wp-block-quote"><p>$A\implies B$ is true if and only if $\neg B \implies \neg A$ is true.</p></blockquote>
+
+
+
+<p>Wait a second. &#8220;if and only if&#8221;? What does that mean?</p>
+
+
+
+<p>If and only if (commonly abbreviated iff) is a mathematical shorthand for saying that two things are equal. A iff B is just saying that $A\implies B$ and $B\implies A$, that is, if any one is true then both of them are true. For instance, in the second example, a triangle is right angled iff $a^2+b^2=c^2$. In the first example, however, iff doesn&#8217;t hold: $B\implies A$ isn&#8217;t true, as we saw.</p>
+
+
+
+<p>Anyways, what all this is saying is that if a question asks you to prove that if $A$ is true, then $B$ is true, you can do the opposite: prove that if $B$ is <em>not</em> true, then prove that $A$ isn&#8217;t either.</p>
+
+
+
+<p>Let&#8217;s revisit one of our examples.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Question: prove that if $n^2$ is even then so is $n$.</p><p>Proof: We prove the contrapositive: if $n$ is <em>not</em> even, then $n^2$ is <em>not</em> even either. But this is obvious &#8212; if $n$ is odd, then obviously $n^2$ is odd too, so we&#8217;re done.</p></blockquote>
+
+
+
+<p>Note how reminiscent of contradiction this is. It&#8217;s pretty much the same thing.</p>
+
+
+
+<p>One other thing that&#8217;s always in &#8220;methods of proof&#8221;:</p>
+
+
+
+<h5>induction</h5>
+
+
+
+<p>Suppose you wanna prove that something is true for all positive integers $n$. If you can prove that it&#8217;s true for 1, and that if it&#8217;s true for k then it&#8217;s true for k+1, then what you do is set off a domino effect: it&#8217;s true for 1, so it must be true for 2, so it must be true for 3, so it must be&#8230;</p>
+
+
+
+<p>This means that you&#8217;re done!</p>
+
+
+
+<p>Okay, that probably didn&#8217;t make much sense to people who don&#8217;t already know induction. Time for an example.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Question: prove $$(1+2+3+\cdots+n)^2=1^3+2^3+3^3+\cdots+n^3$$</p><p>Proof: (base case) When $n=1$, obviously $1^2=1^3$.</p><p>(inductive step) Suppose $(1+2+3+\cdots+k)^2=1^3+2^3+3^3+\cdots+k^3$. Then  $$\begin{align}&amp;1^3+2^3+3^3+\cdots+k^3+(k+1)^3 \\=&amp;(1+2+3+\cdots+k)^2+(k+1)^3\\=&amp;(1+2+3+\cdots+k)^2+(k+1)^2+k(k+1)^2\\=&amp;(1+2+3+\cdots+k)^2+(k+1)^2+2(k+1)(1+2+3+\cdots+k) \\=&amp;(1+2+3+\cdots+k+(k+1))^2\end{align}$$<br>Let&#8217;s just trust the algebra for now, and forevermore.</p><p>Anyways, what does this tell us? We know that the problem statement is true for $n=1$. But that means that it&#8217;s true for $n=2$ (when k=1 in the inductive step). But then it&#8217;s true for $n=3$ (k=2 in the inductive step). Therefore it&#8217;s also true for $n=4$ (k=3) and so on and so on. Thus it&#8217;s true for all $n$ so we&#8217;re done.</p></blockquote>
+
+
+
+<p>If you don&#8217;t get that, don&#8217;t worry. It&#8217;s not that important, but if you have to learn it, and it still doesn&#8217;t make sense, then look it up online elsewhere I guess? I mean, most questions are doable without this technique.</p>
+
+
+
+<p>Time for some questions! Pick an appropriate technique, and solve. Don&#8217;t worry if the terminology in a question doesn&#8217;t make sense &#8212; again, just google it, or skip it! Skipping questions is completely fine in harder maths. </p>
+
+
+
+<ol><li>Prove that $n^2$ and $n^3+1$ can&#8217;t both be odd.</li><li>Prove that $4$ is never a factor of $n^2+2$</li><li>Prove that for positive reals $a$ and $b$, $\frac{a+b}{2}\ge \sqrt{ab}$</li><li>Prove that $\sqrt{2}$ is irrational.</li><li>If $a^2>b^2$, is it necessarily true that $a>b$? If $a>b$, is it necessarily true that $a^2>b^2$?</li><li>Prove that a triangle has two equal sides if and only if it has two equal angles (hint: to prove this you want to prove that &#8220;if it has two equal sides, it has two equal angles&#8221; and then &#8220;if it has two equal angles, it has two equal sides&#8221; are both true)</li><li>Prove that $11$ is always a factor of $n^{11}-n$ for any positive integer $n$.</li><li>Find all positive integers $a,b,c$ such that $$a^2+b+c,b^2+c+a,c^2+a+b$$ are all perfect squares</li><li>Find all positive integers $a,b,c,d$ such that $$a^2+b+c+d,b^2+c+d+a,c^2+d+a+b,d^2+a+b+c$$ are all perfect squares.</li><li>Find all functions $f:\mathbb{N}\to\mathbb{N}$ such that for any two positive integers $a$ and $b$, $f(a+b)=f(a)+f(b)$</li></ol>
+</div>
+		
+						<div class="navbar bottom">
+						<div class="navbutton prevpost">
+				 <a href="/58/" class="navbuttontext">
+					&lt; prev
+				</a>
+			</div>
+						<span class="bluebar">|</span>
+						<div class="navbutton nextpost">
+				<a href="/60/" class="navbuttontext">
+					next &gt;
+				</a>
+			</div>
+					</div>
+			</div>
+
+	
+	
+
+		
+
+
+		
+
+</article>
+<!-- /#post-## -->
+</main>
+
+
+	</div>
+	<!-- /#site-content.site-content -->
+
+	
+	<footer id="site-footer" class="site-footer">
+		<div class="container">
+							<span style="margin-right:10px;">
+					Experimental night mode (don't expect everything to look good!):
+				</span>
+				<div class="site-footer-menu-container"><ul id="menu-night-mode" class="menu"><li id="menu-item-489" class="wp-night-mode menu-item menu-item-type-custom menu-item-object-custom menu-item-489"><a href="#">Night Mode</a></li>
+</ul></div>			
+			<div id="colophon" class="colophon">
+				&copy; how did i get here				<span id="credits" class="credits">
+					| Manor Theme by <a href="https://www.revood.com/" target="_blank" rel="noopener">Revood</a>				</span>
+			</div>
+		</div>
+	</footer>
+	<!-- /#site-footer.site-footer -->
+
+	<script type='text/javascript' src='https://how-did-i-get-here.com/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20191001' id='jetpack-photon-js'></script>
+<script type='text/javascript' id='manor-navigation-js-extra'>
+/* <![CDATA[ */
+var _btl10n = {"expand":"Expand child menu","collapse":"Collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://how-did-i-get-here.com/wp-content/themes/blogscript/js/navigation.js?ver=0.1.1' id='manor-navigation-js'></script>
+<script type='text/javascript' src='https://how-did-i-get-here.com/wp-includes/js/wp-embed.min.js?ver=5.8' id='wp-embed-js'></script>
+<script src='https://stats.wp.com/e-202134.js' defer></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:10.0',blog:'193378174',post:'875',tz:'10',srv:'how-did-i-get-here.com'} ]);
+	_stq.push([ 'clickTrackerInit', '193378174', '875' ]);
+</script>
+</body>
+</html>
+
+<!--Generated by Endurance Page Cache-->
