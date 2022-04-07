@@ -62,9 +62,9 @@ author:
   bio    : "Hey! I'm a high school student interested in math,
     computer science, and Linux."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://MckinleyX.github.io"
+    #- label: "Website"
+      #icon: "fas fa-fw fa-link"
+      #url: "https://MckinleyX.github.io"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mckinleyx"
