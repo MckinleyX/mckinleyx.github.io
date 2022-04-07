@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-Hello! I'm Mckinley, currently a high schooler. 
+Hello! I'm Mckinley, and this is my personal website.
 
-This website is still a work-in-progress.
+You can find my dotfiles [here](https://github.com/MckinleyX/dotfiles).
+
+
