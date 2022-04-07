@@ -1,6 +1,6 @@
 ---
 title: "Alcumus on AoPS"
-excerpt: "A great wey to practice problems"
+excerpt: "A great way to practice problems"
 collection: math
 categories:
   - Math
