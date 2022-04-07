@@ -102,6 +102,14 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _math
+  - scope:
+      path: ""
+      type: math
+    values:
+      layout: single
+      author_profile: true
+      share: false
 
 category_archive:
   type: liquid
@@ -109,3 +117,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+collections:
+  math:
+    output: true
+    permalink: /:collection/:path/
