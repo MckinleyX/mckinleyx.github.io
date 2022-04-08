@@ -4,6 +4,7 @@ excerpt_separator: "<!--more-->"
 categories:
   - Blog
 tags:
+  - Meta
 ---
 
 So, I have a blog now!
