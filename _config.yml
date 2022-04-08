@@ -70,7 +70,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mckinleyx"
     - label: "Email"
-      icon: "fal fa-fw fa-envelope"
+      icon: "far fa-fw fa-envelope"
       url: "mailto:mckinleyxie+website@protonmail.com"
 
 footer:
@@ -94,7 +94,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: false
       related: false
   # _pages
