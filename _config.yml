@@ -84,6 +84,9 @@ footer:
         #    - label: "Instagram"
         #      icon: "fab fa-fw fa-instagram"
         #      url: "https://instagram.com/"
+    - label: "Email"
+      icon: "far fa-fw fa-envelope"
+      url: "mailto:mckinleyxie+website@protonmail.com"
 
 defaults:
   # _posts
