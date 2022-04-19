@@ -84,8 +84,11 @@ footer:
         #    - label: "Instagram"
         #      icon: "fab fa-fw fa-instagram"
         #      url: "https://instagram.com/"
+    - label: "lichess"
+      icon: "fas fa-fw fa-chess-knight"
+      url: "https://lichess.org/@/faefeyfa"
     - label: "Email"
-      icon: "far fa-fw fa-envelope"
+      icon: "fas fa-fw fa-envelope"
       url: "mailto:mckinleyxie+website@protonmail.com"
 
 defaults:
