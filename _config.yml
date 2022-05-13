@@ -118,6 +118,14 @@ defaults:
       layout: single
       author_profile: true
       share: false
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: false
 
         #category_archive:
         #  type: liquid
@@ -127,5 +135,8 @@ defaults:
         #  path: /tags/
 collections:
   math:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
