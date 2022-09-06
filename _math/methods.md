@@ -8,7 +8,7 @@ categories:
   - Math
 tags:
   - link
-link: https://how-did-i-get-here.com/59/
+link: https://web.archive.org/web/20220102030312/https://how-did-i-get-here.com/59/
 ---
 
 
