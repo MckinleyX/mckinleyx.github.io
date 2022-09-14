@@ -5,7 +5,5 @@ main:
     url: /projects/
   - title: "Blog"
     url: /posts/
-  - title: "CV"
-    url: /assets/cv.pdf
   - title: "About"
     url: /about/
