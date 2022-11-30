@@ -72,6 +72,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:mckinleyxie+website@protonmail.com"
+    - label: "GPG Key"
+      icon: "fas fa-fw fa-key"
+      url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xa4427fea6c3a2af2ddd494047735d9be95954433"
 
 footer:
   links:
@@ -90,6 +93,9 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:mckinleyxie+website@protonmail.com"
+    - label: "GPG Key"
+      icon: "fas fa-fw fa-key"
+      url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xa4427fea6c3a2af2ddd494047735d9be95954433"
 
 defaults:
   # _posts
